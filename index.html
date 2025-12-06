@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fanatical football</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0A192F;
+            --secondary-color: #122238;
+            --accent-color: #64FFDA;
+            --text-color: #CCD6F6;
+            --light-text: #8892B0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            direction: ltr;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header & Main Section */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        /* Main Content with split layout */
+        .main-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 50px;
+            margin-top: 50px;
+            padding: 40px;
+            background-color: var(--secondary-color);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .image-container {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .text-container {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .game-title {
+            font-size: 44px;
+            color: var(--text-color);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .game-subtitle {
+            font-size: 20px;
+            color: var(--light-text);
+            margin-bottom: 25px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
+        }
+
+        .cta-button:hover {
+            background-color: #7affc8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(100, 255, 218, 0.6);
+        }
+
+        /* Features Section */
+        .features-section {
+            margin-top: 60px;
+        }
+
+        .features-section h2 {
+            text-align: center;
+            font-size: 32px;
+            color: var(--text-color);
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            background-color: var(--secondary-color);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item h3 {
+            font-size: 20px;
+            color: var(--accent-color);
+            margin-top: 15px;
+        }
+
+        .feature-item p {
+            color: var(--light-text);
+            font-size: 15px;
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: var(--accent-color);
+        }
+        
+        /* Stats section */
+        .stats-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .stat-item .icon {
+            font-size: 24px;
+            margin-right: 5px;
+        }
+        
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+                padding: 20px;
+            }
+            
+            .text-container {
+                padding: 0;
+            }
+            
+            .game-title {
+                font-size: 36px;
+            }
+            
+            .game-subtitle {
+                font-size: 18px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Games4You</div>
+        </header>
+
+        <main>
+            <section class="main-content">
+                <div class="image-container">
+                    <img src="https://i.postimg.cc/59DGhcbX/Verizon-You-Tube-NFL-Sunday-Ticket-(1).jpg" alt="Viking Saga: Dragonborn Game Cover">
+                </div>
+                <div class="text-container">
+                    <h1 class="game-title">Fanatical football</h1>
+                    <p class="game-subtitle">Fanatical Football (unlimited money)</p>
+                    <p>
+              is the best and most realistic experience of rugby Android system so far. Choose your team and lead a demonstration held the competition, the competition regularly forward to the final victory!
+                    </p>
+                    <a href="https://lockedapp.org/cl/i/pqogjl" class="cta-button">Install Now</a>
+				
+                   
+                    <div class="stats-section">
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <i class="fab fa-android icon" style="color: #3DDC84;"></i>
+                                Android
+                            </div>
+                            <div class="stat-item">
+                                <i class="fab fa-apple icon" style="color: #BDBDBD;"></i>
+                                iOS
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-star icon" style="color: #FFD700;"></i>
+                                8.5 / 10
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
